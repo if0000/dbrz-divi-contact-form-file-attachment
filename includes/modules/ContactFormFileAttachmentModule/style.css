@@ -1,0 +1,193 @@
+.dbrz-form-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dbrz-form-success-message-dev-frame {
+  background-color: rgba(255,255,255,0.72);
+  color: #30313f!important;
+  border-width: 1px;
+  width: 100%;
+  min-height: 150px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase!important;
+}
+
+.et_pb_module_inner .dbrz-form-div-success-message {
+  background-color: rgba(255,255,255,0.72);
+  color: #30313f!important;
+  border-width: 0px;
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase!important;
+}
+
+.dbrz-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  /*text-transform: uppercase!important;*/
+}
+
+.dbrz-form input[type=text]::placeholder, .dbrz-input-field-text::placeholder {
+  color: #30313f!important;
+  opacity: 1;
+}
+
+.dbrz-form input[type=text]:focus, .dbrz-input-field-text:focus {
+  background-color: #f9c9c9;
+}
+
+.dbrz-form input[type=date]:before {
+  content: attr(placeholder);
+}
+
+.dbrz-form input[type="date"]:focus:before {
+  content: '' !important;
+}
+
+div.dbrz-input-field-checkbox {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+div.dbrz-input-field-checkbox-dp {
+  border-width: 0px;
+  border-style: solid!important;
+}
+
+.dbrz-form input[type=checkbox], input.dbrz-input-field-checkbox {
+  filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%) contrast(300%);
+}
+
+div.dbrz-input-field-checkbox label {
+  color: #30313f!important;
+  font-weight: 300!important;
+}
+
+.dbrz-input-field-textarea {
+  background-color: rgba(255,255,255,0.72);
+  color: #30313f!important;
+  border-width: 0px;
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 10px;
+  padding: 15px;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  /*text-transform: uppercase!important;*/
+}
+
+.dbrz-input-field-textarea::placeholder {
+  color: #30313f!important;
+  opacity: 1;
+}
+
+.dbrz-input-field-textarea:focus {
+  background-color: #f9c9c9;
+}
+
+div.dbrz-file-attachment-inform {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 300!important;
+  letter-spacing: normal!important;
+  line-height: 1.5em!important;
+  text-transform: none!important;
+  margin-bottom: 2%;
+}
+
+div .dbrz-file-attachment-inform-main-text, div span.dbrz-file-attachment-inform-main-text {
+  display: inline!important;
+  font-size: 14px;
+  /*text-transform: uppercase;*/
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #30313f;
+}
+
+.dbrz-form input[type=file] {
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.dbrz-form .et_pb_contact_submit, .dbrz-form .et_pb_button {
+  color: #6d607f!important;
+  margin-left: 0px;
+  border-color: #6d607f;
+  border-radius: 0px;
+  font-weight: 300!important;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase!important;
+  padding-top: 16px!important;
+  padding-right: 24px!important;
+  padding-bottom: 16px!important;
+  padding-left: 24px!important;
+}
+
+.dbrz-form .et_pb_contact_submit::after, .dbrz-form .et_pb_button::after {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 981px) {
+
+  .dbrz-form input[type=text], .dbrz-form .dbrz-input-field-text {
+    background-color: rgba(255,255,255,0.72);
+    color: #30313f!important;
+    border-width: 0px;
+    width: 100%;
+    margin-bottom: 2%;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    /*text-transform: uppercase!important;*/
+  }
+
+  .dbrz-form div.dbrz-form-stuffer, .dbrz-form .dbrz-form-stuffer {
+    display: none;
+  }
+
+  span.dbrz-file-attachment-inform-desktop {
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 982px) {
+
+  .dbrz-form input[type=text], .dbrz-form .dbrz-input-field-text {
+    background-color: rgba(255,255,255,0.72);
+    color: #30313f!important;
+    border-width: 0px;
+    width: 49%;
+    margin-bottom: 2%;
+    padding: 15px;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    /*text-transform: uppercase!important;*/
+  }
+
+  .dbrz-form div.dbrz-form-stuffer, .dbrz-form .dbrz-form-stuffer {
+    width: 2%;
+  }
+
+  div .dbrz-file-attachment-inform-desktop, div span.dbrz-file-attachment-inform-desktop {
+    display: inline!important;
+  }
+}
