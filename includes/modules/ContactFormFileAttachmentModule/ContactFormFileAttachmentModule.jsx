@@ -17,7 +17,7 @@ class ContactFormFileAttachmentModule extends Component {
 
     if(this.props.file_att_switch === 'on') {
       return  <div class="dbrz-file-attachment-inform">
-                <span class="dbrz-file-attachment-inform-main-text">Max aggregated upload file size [Bytes] (2MB by default): {dbrzMaxFile}.</span><br />
+                <span class="dbrz-file-attachment-inform-main-text">Max aggregated upload file size [Bytes] (2000000B by default): {dbrzMaxFile}.</span><br />
                 <span class="dbrz-file-attachment-inform-main-text">{dbrzFileMain}</span><br />
                 <span class="dbrz-file-attachment-inform-desktop">{dbrzFileAuxa}</span><br />
                 <span class="dbrz-file-attachment-inform-desktop">{dbrzFileAuxb}</span>
@@ -37,9 +37,11 @@ class ContactFormFileAttachmentModule extends Component {
         {this.fileAttachmentSectionVisibility(this.props)}
       </div>
     );
+    const dbrzPpT = this.props.privacy_policy_text;
+    const dbrzPpL = this.props.privacy_policy_link;
+    const dbrzSbt = this.props.submit_button_text;
     const dbrzSm = this.props.success_message;
     const dbrzFm = this.props.failure_message;
-    const dbrzSbt = this.props.submit_button_text;
 
     return (
       <div class="dbrz-form-div">
@@ -48,6 +50,8 @@ class ContactFormFileAttachmentModule extends Component {
           <div class="dbrz-form-stuffer"></div>
 			    <div class="dbrz-input-field-text" >{dbrzMail}</div>
           <div class="dbrz-input-field-textarea">{dbrzTextbox}</div>
+          <div class="dbrz-file-attachment-inform"><span class="dbrz-file-attachment-inform-main-text">Text for privacy policy checkbox label: {dbrzPpT}</span></div>
+          <div class="dbrz-file-attachment-inform"><span class="dbrz-file-attachment-inform-main-text">Link for privacy policy: {dbrzPpL}</span></div>
           <div class="et_pb_contact_submit et_pb_button">{dbrzSbt}</div>
         </div>
         {dbrzFileAttachmentSection}

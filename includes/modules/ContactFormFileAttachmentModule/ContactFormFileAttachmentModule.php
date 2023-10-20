@@ -183,6 +183,22 @@ class ContactFormFileAttachmentModule extends ET_Builder_Module {
 				'toggle_slug'     => 'outcome_messages',
 				'dynamic_content' => 'text',
 			),
+			'privacy_policy_text' => array(
+				'label'           => esc_html__( 'Privacy Policy checkbox and text.', 'dbrz-divi-contact-form-file-attachment' ),
+				'type'            => 'text',
+				'option_category' => 'basic',
+				'description'     => esc_html__( 'Without accept your privacy policy it is not possible to submit the contact form. An example text could be: "By submitting this contact form I accept the Privacy Policy." ', 'dbrz-divi-contact-form-file-attachment' ),
+				'toggle_slug'     => 'privacy_policy',
+				'dynamic_content' => 'text',
+			),
+			'privacy_policy_link' => array(
+				'label'           => esc_html__( 'Privacy Policy link.', 'dbrz-divi-contact-form-file-attachment' ),
+				'type'            => 'text',
+				'option_category' => 'basic',
+				'description'     => esc_html__( 'Here you can add url to your privacy policy', 'dbrz-divi-contact-form-file-attachment' ),
+				'toggle_slug'     => 'privacy_policy',
+				'dynamic_content' => 'text',
+			),
 			'submit_button_text'=> array(
 				'label'           => esc_html__( 'Submit Button', 'dbrz-divi-contact-form-file-attachment' ),
 				'type'            => 'text',
@@ -209,6 +225,9 @@ class ContactFormFileAttachmentModule extends ET_Builder_Module {
 					'form_placeholder_texts' => array(
 						'title' => 'Form fields placholder texts',
 					),
+					'privacy_policy' => array(
+						'title' => 'Privacy policy settings',
+					),
 					'file_attachment' => array(
 						'title' => 'File attachment settings',
 					),
@@ -233,7 +252,7 @@ class ContactFormFileAttachmentModule extends ET_Builder_Module {
 		$dbrz_current_working_directory = posix_getcwd();
 		$dbrz_temp_file_directory = $dbrz_current_working_directory . "/wp-content/uploads/file-attachment/";
 		if (!file_exists($dbrz_temp_file_directory)) {
-			mkdir($dbrz_temp_file_directory, 0777, true);
+			mkdir($dbrz_temp_file_directory, 0755, true);
 		}
 
 		$dbrz_presubmission = true;
@@ -464,7 +483,7 @@ class ContactFormFileAttachmentModule extends ET_Builder_Module {
 					<textarea class="dbrz-input-field-textarea" name="dbrz-form-textbox" data-required_mark="not_required" placeholder="%15$s">%8$s</textarea>
 						%5$s
 					<input type="hidden" id="dbrz-form-CFNum" name="dbrz-form-CFNum" value="%2$d">
-					<div id="dbrz-div-input-field-checkbox-dp" class="dbrz-input-field-checkbox dbrz-input-field-checkbox-dp"><input type="checkbox" name="dbrz-form-data-protection" id="dbrz-form-data-protection" data-required_mark="required" %19$s ><label for="dbrz-form-data-protection">elfogadom az <a href="index.php/adatvedelmi-nyilatkozat/" target="_blank">adatvédelmi nyilatkozatot</a></label></div>
+					<div id="dbrz-div-input-field-checkbox-dp" class="dbrz-input-field-checkbox dbrz-input-field-checkbox-dp"><input type="checkbox" name="dbrz-form-data-protection" id="dbrz-form-data-protection" data-required_mark="required" %19$s ><label for="dbrz-form-data-protection">%6$s <a href="%7$s" target="_blank">link</a></label></div>
 					<button type="submit" name="et_builder_submit_button" class="et_pb_contact_submit et_pb_button g-recaptcha" data-icon="$" data-sitekey="%20$s" data-callback="dbrzValidateFormJs" data-action="submit">%16$s</button>
 					%17$s
 				</form>
@@ -475,8 +494,8 @@ class ContactFormFileAttachmentModule extends ET_Builder_Module {
 			$dbrz_name_value,
 			$dbrz_mail_value,
 			$dbrz_file_attachment_ui,
-			'',
-			'',
+			$this->props['privacy_policy_text'],
+			$this->props['privacy_policy_link'],
 			$dbrz_text_value,
 			$dbrz_file_name_value,
 			$this->props['name'],
