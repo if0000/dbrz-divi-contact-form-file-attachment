@@ -19,7 +19,6 @@
 
 .et_pb_module_inner .dbrz-form-div-success-message {
   background-color: #eeeeee;
-  /*background-color: rgba(255,255,255,0.72);*/
   color: #30313f!important;
   border-width: 0px;
   width: 100%;
@@ -61,6 +60,7 @@
 div.dbrz-input-field-checkbox {
   display: flex;
   width: 100%;
+  margin-top: 2%;
   margin-bottom: 2%;
 }
 
@@ -80,7 +80,6 @@ div.dbrz-input-field-checkbox label {
 
 .dbrz-input-field-textarea {
   background-color: #eeeeee;
-  /*background-color: rgba(255,255,255,0.72);*/
   color: #30313f!important;
   border-width: 0px;
   width: 100%;
@@ -108,7 +107,7 @@ div.dbrz-file-attachment-inform {
   letter-spacing: normal!important;
   line-height: 1.5em!important;
   text-transform: none!important;
-  margin-bottom: 2%;
+  margin-top: 2vh;
 }
 
 div .dbrz-file-attachment-inform-main-text, div span.dbrz-file-attachment-inform-main-text {
@@ -119,9 +118,59 @@ div .dbrz-file-attachment-inform-main-text, div span.dbrz-file-attachment-inform
   color: #30313f;
 }
 
+div .dbrz-file-attachment-inform-main-text-user, div span.dbrz-file-attachment-inform-main-text-user {
+  display: inline!important;
+  background-color: #eeeeee;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #30313f;
+}
+
+div .dbrz-file-attachment-inform-text, div span.dbrz-file-attachment-inform-text {
+  display: inline!important;
+  font-weight: 300;
+  color: #30313f;
+}
+
+div .dbrz-file-attachment-inform-text-user, div span.dbrz-file-attachment-inform-text-user {
+  display: inline!important;
+  background-color: #eeeeee;
+  font-weight: 300;
+  color: #30313f;
+}
+
+div.dbrz-privacy-policy-inform {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 300!important;
+  letter-spacing: normal!important;
+  line-height: 1.5em!important;
+  text-transform: none!important;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+div .dbrz-privacy-policy-inform-text, div span.dbrz-privacy-policy-inform-text {
+  display: inline!important;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #30313f;
+}
+
+div .dbrz-privacy-policy-inform-text-user, div span.dbrz-privacy-policy-inform-text-user {
+  display: inline!important;
+  background-color: #eeeeee;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: #30313f;
+}
+
 .dbrz-form input[type=file] {
   width: 100%;
-  margin-bottom: 2%;
 }
 
 .dbrz-form .et_pb_contact_submit, .dbrz-form .et_pb_button {
@@ -160,10 +209,6 @@ div .dbrz-file-attachment-inform-main-text, div span.dbrz-file-attachment-inform
   .dbrz-form div.dbrz-form-stuffer, .dbrz-form .dbrz-form-stuffer {
     display: none;
   }
-
-  span.dbrz-file-attachment-inform-desktop {
-    display: none;
-  }
 }
 
 
@@ -182,9 +227,5 @@ div .dbrz-file-attachment-inform-main-text, div span.dbrz-file-attachment-inform
 
   .dbrz-form div.dbrz-form-stuffer, .dbrz-form .dbrz-form-stuffer {
     width: 2%;
-  }
-
-  div .dbrz-file-attachment-inform-desktop, div span.dbrz-file-attachment-inform-desktop {
-    display: inline!important;
   }
 }

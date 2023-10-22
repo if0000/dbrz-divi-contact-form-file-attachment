@@ -17,10 +17,10 @@ class ContactFormFileAttachmentModule extends Component {
 
     if(this.props.file_att_switch === 'on') {
       return  <div class="dbrz-file-attachment-inform">
-                <span class="dbrz-file-attachment-inform-main-text">Max aggregated upload file size [Bytes] (2000000B by default): {dbrzMaxFile}.</span><br />
-                <span class="dbrz-file-attachment-inform-main-text">{dbrzFileMain}</span><br />
-                <span class="dbrz-file-attachment-inform-desktop">{dbrzFileAuxa}</span><br />
-                <span class="dbrz-file-attachment-inform-desktop">{dbrzFileAuxb}</span>
+                <span class="dbrz-file-attachment-inform-main-text">Max aggregated upload file size [Bytes] (2000000B by default): <span class="dbrz-file-attachment-inform-main-text-user">{dbrzMaxFile}</span></span><br />
+                <span class="dbrz-file-attachment-inform-main-text"><span class="dbrz-file-attachment-inform-main-text-user">{dbrzFileMain}</span></span><br />
+                <span class="dbrz-file-attachment-inform-text"><span class="dbrz-file-attachment-inform-text-user">{dbrzFileAuxa}</span></span><br />
+                <span class="dbrz-file-attachment-inform-text"><span class="dbrz-file-attachment-inform-text-user">{dbrzFileAuxb}</span></span>
               </div>;
     } else {
       return  <div class="dbrz-file-attachment-inform"></div>;
@@ -32,11 +32,7 @@ class ContactFormFileAttachmentModule extends Component {
     const dbrzName = this.props.name;
     const dbrzMail = this.props.mail;
     const dbrzTextbox = this.props.textbox;
-    const dbrzFileAttachmentSection = (
-      <div class="dbrz-file-attachment-inform">
-        {this.fileAttachmentSectionVisibility(this.props)}
-      </div>
-    );
+    const dbrzFileAttachmentSection = this.fileAttachmentSectionVisibility(this.props);
     const dbrzPpT = this.props.privacy_policy_text;
     const dbrzPpL = this.props.privacy_policy_link;
     const dbrzSbt = this.props.submit_button_text;
@@ -50,22 +46,24 @@ class ContactFormFileAttachmentModule extends Component {
           <div class="dbrz-form-stuffer"></div>
 			    <div class="dbrz-input-field-text" >{dbrzMail}</div>
           <div class="dbrz-input-field-textarea">{dbrzTextbox}</div>
-          <div class="dbrz-file-attachment-inform"><span class="dbrz-file-attachment-inform-main-text">Text for privacy policy checkbox label: {dbrzPpT}</span></div>
-          <div class="dbrz-file-attachment-inform"><span class="dbrz-file-attachment-inform-main-text">Link for privacy policy: {dbrzPpL}</span></div>
+          {dbrzFileAttachmentSection}
+          <div class="dbrz-privacy-policy-inform">
+            <span class="dbrz-privacy-policy-inform-text">Text for privacy policy checkbox label: <span class="dbrz-privacy-policy-inform-text-user">{dbrzPpT}</span></span><br />
+            <span class="dbrz-privacy-policy-inform-text">Link for privacy policy: <span class="dbrz-privacy-policy-inform-text-user">{dbrzPpL}</span></span><br />
+          </div>
           <div class="et_pb_contact_submit et_pb_button">{dbrzSbt}</div>
         </div>
-        {dbrzFileAttachmentSection}
         <div class="dbrz-file-attachment-inform">
           <br />
           <br />
           <span class="dbrz-file-attachment-inform-main-text"><b>Message on success</b>:</span><br />
-          <span class="dbrz-file-attachment-inform-desktop">{dbrzSm}</span>
+          <span class="dbrz-file-attachment-inform-text-user">{dbrzSm}</span>
         </div>
         <div class="dbrz-file-attachment-inform">
           <br />
           <br />
           <span class="dbrz-file-attachment-inform-main-text"><b>Message on failure</b>:</span><br />
-          <span class="dbrz-file-attachment-inform-desktop">{dbrzFm}</span>
+          <span class="dbrz-file-attachment-inform-text-user">{dbrzFm}</span>
         </div>
       </div>
     );

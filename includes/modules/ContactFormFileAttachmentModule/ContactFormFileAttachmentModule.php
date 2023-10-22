@@ -462,10 +462,10 @@ class ContactFormFileAttachmentModule extends ET_Builder_Module {
 						<span class="dbrz-file-attachment-inform-main-text">
 							' . $this->props['desc_file_att_main'] . '
 						</span><br />
-						<span class="dbrz-file-attachment-inform-desktop">
+						<span class="dbrz-file-attachment-inform-text">
 							' . $this->props['desc_file_att_auxa'] . '
 						</span><br />
-						<span class="dbrz-file-attachment-inform-desktop">
+						<span class="dbrz-file-attachment-inform-text">
 							' . $this->props['desc_file_att_auxb'] . '
 						</span>
 					</div>
