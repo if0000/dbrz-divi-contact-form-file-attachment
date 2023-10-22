@@ -9,7 +9,6 @@ Author URI:  https://tech.ronizongor.com
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: dbrz-divi-contact-form-file-attachment
-Domain Path: /languages
 
 Divi Contact Form File Attachment is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
