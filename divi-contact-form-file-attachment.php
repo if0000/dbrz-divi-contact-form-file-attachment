@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Divi Contact Form File Attachment
-Plugin URI:  https://tech.ronizongor.com
+Plugin URI:  https://tech.ronizongor.com/post/divi-contact-form-file-attachment
 Description: Adds file attachment functionality to Divi Contact Form module
 Version:     1.0.0
 Author:      I. Finta @ Roni Zongor & Co / TECH
